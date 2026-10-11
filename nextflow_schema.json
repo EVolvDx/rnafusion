@@ -320,6 +320,21 @@
                     "minimum": 0,
                     "fa_icon": "fas fa-cut"
                 },
+                "trim_front1": {
+                    "type": "integer",
+                    "default": 0,
+                    "description": "The amount of bases to trim from the start (5' end) of read 1 with fastp, none by default. Needs fastp in --tools",
+                    "minimum": 0,
+                    "fa_icon": "fas fa-cut"
+                },
+                "trim_front2": {
+                    "type": "integer",
+                    "default": 0,
+                    "description": "The amount of bases to trim from the start (5' end) of read 2 with fastp, none by default. Needs fastp in --tools",
+                    "help_text": "Takara SMARTer Stranded Total RNA-Seq Pico v3 libraries start read 2 with an 8-base UMI and a 6-base linker: use 14.",
+                    "minimum": 0,
+                    "fa_icon": "fas fa-cut"
+                },
                 "trim_tail_fusioncatcher": {
                     "type": "integer",
                     "description": "The amount of bases to trim at the tail of each read for fusioncatcher, none will be trimmed by default",
