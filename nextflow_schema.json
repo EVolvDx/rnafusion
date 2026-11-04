@@ -335,6 +335,18 @@
                     "minimum": 0,
                     "fa_icon": "fas fa-cut"
                 },
+                "arriba_args": {
+                    "type": "string",
+                    "description": "Extra arguments appended to the arriba command (EvolvDx).",
+                    "help_text": "For example `-S 1` lowers the min_support filter from 2 reads to 1 for low-input libraries.",
+                    "fa_icon": "fas fa-terminal"
+                },
+                "starfusion_args": {
+                    "type": "string",
+                    "description": "Extra arguments appended to the STAR-Fusion command (EvolvDx).",
+                    "help_text": "For example `--min_sum_frags 1 --min_FFPM 0` keeps fusions supported by a single read.",
+                    "fa_icon": "fas fa-terminal"
+                },
                 "trim_tail_fusioncatcher": {
                     "type": "integer",
                     "description": "The amount of bases to trim at the tail of each read for fusioncatcher, none will be trimmed by default",

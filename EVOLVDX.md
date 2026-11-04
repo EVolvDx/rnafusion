@@ -10,6 +10,13 @@ revision the automated runs use. Never open pull requests against nf-core upstre
   libraries start read 2 with an 8-base UMI and a 6-base linker, so runs use `--trim_front2 14`.
   rnafusion has no UMI deduplication; Arriba flags PCR duplicates itself and STAR-Fusion counts
   reads as aligned.
+- `--arriba_args` / `--starfusion_args`: extra arguments appended to the Arriba and STAR-Fusion
+  commands (both empty by default, so upstream behaviour is unchanged). Low-input urine libraries
+  can carry a real fusion on a single molecule, which the default filters drop (Arriba
+  `min_support` 2 reads; STAR-Fusion `--min_sum_frags 2`, `--min_FFPM 0.1`). Example run.json
+  params: `"arriba_args": "-S 1"`, `"starfusion_args": "--min_sum_frags 1 --min_FFPM 0"`. Expect
+  many more single-read artefacts; filter downstream (known fusion pairs, panel of normals, UMI
+  molecule count).
 
 ## How runs are launched
 
